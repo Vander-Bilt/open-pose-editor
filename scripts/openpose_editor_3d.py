@@ -75,9 +75,10 @@ def create_ui():
 
         use_online: bool = opts.openpose3d_use_online_version
         cn_max: int = opts.control_net_max_models_num
+        cn_max = 2
     except (ImportError, AttributeError):
         # Values when this script is run standalone or if controlnet is not installed
-        cn_max = 0
+        cn_max = 2
         use_online = False
 
     if use_online:
